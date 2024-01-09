@@ -14,6 +14,10 @@ void get_op(char *token , stack_t **stack, unsigned int counter)
 	instruction_t function[] ={
 		{"pall", _pall},
 		{"pint", _pint},
+		{"pop", _pop},
+		//{"swap", _swap},
+		//{"add", _add},
+		//{"nop", _nop},
 		{NULL, NULL}
 	};
 	while (function[i].opcode)

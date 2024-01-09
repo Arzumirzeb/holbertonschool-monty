@@ -46,4 +46,5 @@ void _pall(stack_t **stack, unsigned int counter);
 void free_stack(stack_t *stack);
 void get_op(char *token , stack_t **stack, unsigned int counter);
 void _pint(stack_t **stack, unsigned int counter);
+void _pop(stack_t **stack, unsigned int counter);
 #endif
