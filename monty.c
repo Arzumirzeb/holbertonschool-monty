@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 	stream = fopen(arg, "r");
 	if (stream == NULL)
 	{
-		fprintf(stderr, "Error: Can't open file%s\n", arg);
+		fprintf(stderr, "Error: Can't open file %s\n", arg);
 		exit(EXIT_FAILURE);
 	}
 	get_read(stream, &stack);
@@ -50,12 +50,12 @@ void get_read(FILE *stream, stack_t **stack)
 	while (getline(&opcode, &len, stream) != -1)
 	{
 		counter++;
-		token = strtok(opcode, " \n\r\t");
+		token = strtok(opcode, " \n\t\r");
 		if (!token || *token == '#')
 			continue;
 		if (strcmp(token, "push") == 0)
 		{
-			token = strtok(NULL, " \n\r\t");
+			token = strtok(NULL, " \n\t\r");
 			_push(token, stack, counter);
 		}
 		else

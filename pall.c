@@ -5,9 +5,8 @@
  * @counter: line number
  * Return: void
  */
-void _pall(stack_t **stack, unsigned int counter)
+void _pall(stack_t **stack, unsigned int __attribute__((unused)) counter)
 {
-	(void)counter;
 	int index = 0;
 	stack_t *temp;
 

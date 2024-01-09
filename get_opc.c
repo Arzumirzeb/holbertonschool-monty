@@ -21,7 +21,8 @@ void get_op(char *token, stack_t **stack, unsigned int counter)
 		{
 			function[i].f(stack, counter);
 			break;
-		}i++;
+		}
+		i++;
 
 	}
 	if (function[i].opcode == NULL)

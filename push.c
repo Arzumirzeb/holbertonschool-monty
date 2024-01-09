@@ -27,7 +27,7 @@ void _push(char *opcode, stack_t **stack, unsigned int counter)
 	}
 	else
 	{
-		fprintf(stderr, "L%d usage: push integer\n", counter);
+		fprintf(stderr, "L%u usage: push integer\n", counter);
 		exit(EXIT_FAILURE);
 	}
 	if (*stack != NULL)
