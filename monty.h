@@ -49,4 +49,5 @@ void _pint(stack_t **stack, unsigned int counter);
 void _pop(stack_t **stack, unsigned int counter);
 void _swap(stack_t **stack, unsigned int counter);
 void _add(stack_t **stack, unsigned int counter);
+void _nop(stack_t **stack, unsigned int counter);
 #endif
