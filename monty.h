@@ -43,6 +43,6 @@ void get_read(FILE *stream, stack_t **stack);
 int check_int(char *opcode);
 void _push(char *opcode, stack_t **stack, unsigned int counter);
 void _pall(stack_t **stack, unsigned int __attribute__((unused)) counter);
-void free_stack(stack_t *stack);
-void get_op(char *token, stack_t **stack, unsigned int counter);
+void free_stack(stack_t *stack_head);
+void get_op(char *token, stack_t **c_stack, unsigned int counter);
 #endif

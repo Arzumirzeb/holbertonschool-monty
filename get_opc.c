@@ -7,7 +7,7 @@
 * Return: void
 */
 
-void get_op(char *token, stack_t **stack, unsigned int counter)
+void get_op(char *token, stack_t **c_stack, unsigned int counter)
 {
 	int i = 0;
 
@@ -19,7 +19,7 @@ void get_op(char *token, stack_t **stack, unsigned int counter)
 	{
 		if (strcmp(function[i].opcode, token) == 0)
 		{
-			function[i].f(stack, counter);
+			function[i].f(c_stack, counter);
 			break;
 		}
 		i++;
@@ -53,7 +53,6 @@ int check_int(char *opcode)
 		}
 		if (!isdigit(opcode[index]))
 			return (0);
-
 		index++;
 	}
 	return (1);
@@ -64,15 +63,15 @@ int check_int(char *opcode)
  * Return: void
 */
 
-void free_stack(stack_t *stack)
+void free_stack(stack_t *stack_head)
 {
 	stack_t *temp;
 
-	while (stack != NULL)
+	while (stack_head != NULL)
 	{
-		temp = stack->next;
-		free(stack);
-		stack = temp;
+		temp = stack_head->next;
+		free(stack_head);
+		stack_head = temp;
 	}
 
 }

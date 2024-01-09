@@ -7,15 +7,16 @@
  */
 void _pall(stack_t **stack, unsigned int __attribute__((unused)) counter)
 {
-	int index = 0;
 	stack_t *temp;
 
+	if (!*stack)
+		return;
+
 	temp = *stack;
-	while (temp)
+	while (*stack)
 	{
-		if (temp != NULL)
-			printf("%d\n", temp->n);
-		index++;
-		temp = temp->next;
+		printf("%d\n", (*stack)->n);
+		(*stack) = (*stack)->next;
 	}
+	*stack = temp;
 }
