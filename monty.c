@@ -43,7 +43,7 @@ int main(int argc, char **argv)
  */
 void get_read(FILE *stream, stack_t **stack)
 {
-	char *opcode, *token;
+	char *opcode, *token = NULL;
 	size_t len = 0;
 	int counter = 0;
 
