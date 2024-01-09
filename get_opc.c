@@ -13,6 +13,7 @@ void get_op(char *token , stack_t **stack, unsigned int counter)
 
 	instruction_t function[] ={
 		{"pall", _pall},
+		{"pint", _pint},
 		{NULL, NULL}
 	};
 	while (function[i].opcode)
@@ -22,6 +23,7 @@ void get_op(char *token , stack_t **stack, unsigned int counter)
 			function[i].f(stack, counter);
 			break;
 		}
+		i++;
 
 	}
 	if (function[i].opcode == NULL)
