@@ -14,9 +14,7 @@ void _pall(stack_t **stack, unsigned int __attribute__((unused)) counter)
 	while (temp)
 	{
 		if (temp != NULL)
-		{
 			printf("%d\n", temp->n);
-		}
 		index++;
 		temp = temp->next;
 	}

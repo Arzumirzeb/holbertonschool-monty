@@ -13,7 +13,7 @@ void _push(char *opcode, stack_t **stack, unsigned int counter)
 
 	new = malloc(sizeof(stack_t));
 
-	if (!new)
+	if (new == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
@@ -31,9 +31,7 @@ void _push(char *opcode, stack_t **stack, unsigned int counter)
 		exit(EXIT_FAILURE);
 	}
 	if (*stack != NULL)
-	{
 		(*stack)->prev = new;
-	}
 	*stack = new;
 
 }

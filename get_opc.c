@@ -42,7 +42,7 @@ int check_int(char *opcode)
 {
 	unsigned int index = 0;
 
-	if (!opcode)
+	if (opcode == NULL)
 		return (0);
 	while (opcode[index])
 	{
@@ -52,9 +52,8 @@ int check_int(char *opcode)
 			continue;
 		}
 		if (!isdigit(opcode[index]))
-		{
 			return (0);
-		}
+
 		index++;
 	}
 	return (1);
