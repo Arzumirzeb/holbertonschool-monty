@@ -15,7 +15,7 @@ void get_op(char *token , stack_t **stack, unsigned int counter)
 		{"pall", _pall},
 		{"pint", _pint},
 		{"pop", _pop},
-		//{"swap", _swap},
+		{"swap", _swap},
 		//{"add", _add},
 		//{"nop", _nop},
 		{NULL, NULL}

@@ -1,6 +1,8 @@
 #include "monty.h"
 /**
- *
+ * _pop - deleting elements
+ * @stack: stack
+ * @counter: number of line
  */
 void _pop(stack_t **stack, unsigned int counter)
 {
