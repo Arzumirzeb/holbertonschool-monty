@@ -15,6 +15,7 @@ void exec_others(stack_t **stack, char *op, unsigned int line_number)
 								{"pop", pop},
 								{"swap", swap},
 								{"add", add},
+								{"nop", nop},
 								{NULL, NULL}
 	};
 
