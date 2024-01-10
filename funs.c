@@ -15,7 +15,7 @@ int convert(char *op)
 	}
 	while (op[a])
 	{
-		if (op[0] == '-')
+		if (op[a] == '-' && a == 0)
 		{
 			a++;
 			continue;
