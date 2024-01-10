@@ -32,7 +32,6 @@ int convert(char *op)
  * silgetsin - Something usefull
  * @stack: Something more usefull
  *
- * Return: Something much more usefull
  */
 void silgetsin(stack_t *stack)
 {

@@ -4,7 +4,6 @@
  * @stack: Something more usefull
  * @line_number: Something more usefull
  *
- * Return: Something much more usefull
  */
 void swap(stack_t **stack, unsigned int line_number)
 {

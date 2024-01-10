@@ -5,7 +5,6 @@
  * @op: Something more useful
  * @stack: Something more useful
  *
- * Return: Something much more useful
  */
 void exec_others(stack_t **stack, char *op, unsigned int line_number)
 {
@@ -15,6 +14,7 @@ void exec_others(stack_t **stack, char *op, unsigned int line_number)
 								{"pint", pint},
 								{"pop", pop},
 								{"swap", swap},
+								{"add", add},
 								{NULL, NULL}
 	};
 
@@ -38,7 +38,6 @@ void exec_others(stack_t **stack, char *op, unsigned int line_number)
  * @file: Something more useful
  * @stack: Something more useful
  *
- * Return: Something much more useful
  */
 void execute(FILE *file, stack_t **stack)
 {

@@ -5,7 +5,6 @@
  * @op: Something more usefull
  * @line_number: Something more usefull
  *
- * Return: Something much more usefull
  */
 void push(stack_t **stack, char *op, unsigned int line_number)
 {
