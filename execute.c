@@ -45,14 +45,14 @@ void execute(FILE *file, stack_t **stack)
 
 	while (getline(&buf, &size, file) != -1)
 	{
-		tok = strtok(buf, " \n\t\r");
+		tok = strtok(buf, " \n\t\r$");
 		if (tok == NULL || *tok == '#')
 		{
 			continue;
 		}
 		if (strcmp(tok, "push") == 0)
 		{
-			tok = strtok(NULL, " \n\t\r");
+			tok = strtok(NULL, " \n\t\r$");
 			push(stack, tok, line_count);
 		}
 		else
