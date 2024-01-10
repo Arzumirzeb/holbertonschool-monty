@@ -49,7 +49,7 @@ int execute(FILE *file, stack_t **stack)
 	size_t size = 0;
 	int line_count = 1, adam = 0;
 
-	while (getline(&buf, &size, file) != -1)
+	while (getline(&buf, &size, file) != -1 && adam != 1)
 	{
 		tok = strtok(buf, " \n\t\r$");
 		if (tok == NULL || *tok == '#')

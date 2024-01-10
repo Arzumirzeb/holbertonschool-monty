@@ -1,1 +1,5 @@
-push -31dbvshvd
+push
+push 1
+push 31
+push 4
+pall
