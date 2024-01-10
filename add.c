@@ -8,10 +8,11 @@
 void add(stack_t **stack, unsigned int line_number)
 {
 	int a = 0;
-	stack_t *temp = (*stack)->next;
+	stack_t *temp;
 
-	if (stack != NULL && (*stack)->next != NULL && *stack != NULL)
+	if (*stack != NULL && (*stack)->next != NULL)
 	{
+		temp = (*stack)->next;
 		a += (*stack)->n;
 		a += temp->n;
 		free(*stack);
