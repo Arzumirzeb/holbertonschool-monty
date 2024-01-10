@@ -48,7 +48,7 @@ void execute(FILE *file, stack_t **stack)
 	while (getline(&buf, &size, file) != -1)
 	{
 		tok = strtok(buf, " \n\t\r$");
-		if (tok == NULL)
+		if (tok == NULL || *tok == '#')
 		{
 			continue;
 		}
