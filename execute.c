@@ -12,6 +12,7 @@ void exec_others(stack_t **stack, char *op, unsigned int line_number)
 	int i = 0;
 	instruction_t ins[] = {
 								{"pall", pall},
+								{"pint", pint},
 								{NULL, NULL}
 	};
 
@@ -39,7 +40,7 @@ void exec_others(stack_t **stack, char *op, unsigned int line_number)
  */
 void execute(FILE *file, stack_t **stack)
 {
-	char *buf, *tok = NULL;
+	char *buf = NULL, *tok = NULL;
 	size_t size = 0;
 	int line_count = 1;
 
