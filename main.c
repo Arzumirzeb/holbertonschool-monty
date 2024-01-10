@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 {
 	stack_t *stack = NULL;
 	FILE *file;
+	int adam = 0;
 
 	if (argc != 2)
 	{
@@ -22,8 +23,12 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	execute(file, &stack);
+	adam = execute(file, &stack);
 	silgetsin(stack);
 	fclose(file);
-	return (EXIT_SUCCESS);
+	if (adam == 1)
+	{
+		exit(EXIT_FAILURE);
+	}
+	return (0);
 }

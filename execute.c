@@ -5,8 +5,9 @@
  * @op: Something more useful
  * @stack: Something more useful
  *
+ * Return: Something much more usefull
  */
-void exec_others(stack_t **stack, char *op, unsigned int line_number)
+int exec_others(stack_t **stack, char *op, unsigned int line_number)
 {
 	int i = 0;
 	instruction_t ins[] = {
@@ -31,20 +32,22 @@ void exec_others(stack_t **stack, char *op, unsigned int line_number)
 	if (ins[i].opcode == NULL)
 	{
 		dprintf(STDERR_FILENO, "L%d: unknown instruction %s\n", line_number, op);
-		exit(EXIT_FAILURE);
+		return (1);
 	}
+	return (0);
 }
 /**
  * execute - Something useful
  * @file: Something more useful
  * @stack: Something more useful
  *
+ * Return: Something much more usefull
  */
-void execute(FILE *file, stack_t **stack)
+int execute(FILE *file, stack_t **stack)
 {
 	char *buf = NULL, *tok = NULL;
 	size_t size = 0;
-	int line_count = 1;
+	int line_count = 1, adam = 0;
 
 	while (getline(&buf, &size, file) != -1)
 	{
@@ -56,13 +59,14 @@ void execute(FILE *file, stack_t **stack)
 		if (strcmp(tok, "push") == 0)
 		{
 			tok = strtok(NULL, " \n\t\r$");
-			push(stack, tok, line_count);
+			adam = push(stack, tok, line_count);
 		}
 		else
 		{
-			exec_others(stack, tok, line_count);
+			adam = exec_others(stack, tok, line_count);
 		}
 		line_count++;
 	}
 	free(buf);
+	return (adam);
 }

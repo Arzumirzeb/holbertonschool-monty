@@ -5,8 +5,9 @@
  * @op: Something more usefull
  * @line_number: Something more usefull
  *
+ * Return: Something much more usefull
  */
-void push(stack_t **stack, char *op, unsigned int line_number)
+int push(stack_t **stack, char *op, unsigned int line_number)
 {
 	stack_t *new;
 
@@ -15,8 +16,7 @@ void push(stack_t **stack, char *op, unsigned int line_number)
 	{
 		dprintf(STDERR_FILENO, "Error: malloc failed\n");
 		silgetsin(*stack);
-		exit(EXIT_FAILURE);
-		return;
+		return (1);
 	}
 	if (convert(op) == 1 && op != NULL)
 	{
@@ -28,11 +28,12 @@ void push(stack_t **stack, char *op, unsigned int line_number)
 	{
 		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", line_number);
 		silgetsin(*stack);
-		exit(EXIT_FAILURE);
+		return (1);
 	}
 	if (*stack != NULL)
 	{
 		(*stack)->prev = new;
 	}
 	*stack = new;
+	return (0);
 }
