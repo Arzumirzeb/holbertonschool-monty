@@ -13,6 +13,7 @@ void exec_others(stack_t **stack, char *op, unsigned int line_number)
 	instruction_t ins[] = {
 								{"pall", pall},
 								{"pint", pint},
+								{"pop", pop},
 								{NULL, NULL}
 	};
 
