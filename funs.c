@@ -7,24 +7,24 @@
  */
 int convert(char *op)
 {
-	unsigned int i = 0;
+	unsigned int a = 0;
 
 	if (op == NULL)
 	{
 		return (0);
 	}
-	while (op[i])
+	while (op[a])
 	{
 		if (op[0] == '-')
 		{
-			i++;
+			a++;
 			continue;
 		}
-		if (isdigit(op[i]) == 0)
+		if (!isdigit(op[a]))
 		{
 			return (0);
 		}
-		i++;
+		a++;
 	}
 	return (1);
 }

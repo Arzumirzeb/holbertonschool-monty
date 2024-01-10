@@ -25,5 +25,5 @@ int main(int argc, char *argv[])
 	execute(file, &stack);
 	silgetsin(stack);
 	fclose(file);
-	return (0);
+	exit(EXIT_SUCCESS);
 }

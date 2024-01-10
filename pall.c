@@ -19,7 +19,10 @@ void pall(stack_t **stack, unsigned int line_number)
 	zor = *stack;
 	while (zor != NULL)
 	{
-		printf("%d\n", zor->n);
+		if (zor != NULL)
+		{
+			printf("%d\n", zor->n);
+		}
 		zor = zor->next;
 		i++;
 	}
