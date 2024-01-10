@@ -15,7 +15,6 @@ int push(stack_t **stack, char *op, unsigned int line_number)
 	if (new == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: malloc failed\n");
-		silgetsin(*stack);
 		return (1);
 	}
 	if (convert(op) == 1 && op != NULL)
@@ -27,7 +26,7 @@ int push(stack_t **stack, char *op, unsigned int line_number)
 	else
 	{
 		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", line_number);
-		silgetsin(*stack);
+		free(new);
 		return (1);
 	}
 	if (*stack != NULL)
