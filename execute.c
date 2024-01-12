@@ -47,10 +47,11 @@ int execute(FILE *file, stack_t **stack)
 {
 	char *buf = NULL, *tok = NULL;
 	size_t size = 0;
-	int line_count = 1, adam = 0;
+	int line_count = 0, adam = 0;
 
 	while (getline(&buf, &size, file) != -1 && adam != 1)
 	{
+		line_count++;
 		tok = strtok(buf, " \n\t\r$");
 		if (tok == NULL || *tok == '#')
 		{
@@ -65,7 +66,6 @@ int execute(FILE *file, stack_t **stack)
 		{
 			adam = exec_others(stack, tok, line_count);
 		}
-		line_count++;
 	}
 	free(buf);
 	return (adam);
