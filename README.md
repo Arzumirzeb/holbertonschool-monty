@@ -90,6 +90,16 @@ Keep the scope of global variables as small as possible.
 ## FILES
 |File|Description|
 |---|---|
+|[get_op.c](https://github.com/Arzumirzeb/holbertonschool-monty/blob/arzu/get_opc.c)|for getting opcode|
+|[add.c](https://github.com/Arzumirzeb/holbertonschool-monty/blob/arzu/add.c)|for adding value to stack|
+|[main.c](https://github.com/Arzumirzeb/holbertonschool-monty/blob/arzu/main.c)|main file|
+|[monty.h](https://github.com/Arzumirzeb/holbertonschool-monty/blob/arzu/monty.h)|header file|
+|[pall.c](https://github.com/Arzumirzeb/holbertonschool-monty/blob/arzu/pall.c)|print all value|
+|[pint.c](https://github.com/Arzumirzeb/holbertonschool-monty/blob/arzu/pint.c)|pint prints the value at the top of the stack|
+|[pop.c](https://github.com/Arzumirzeb/holbertonschool-monty/blob/arzu/pop.c)|delete value|
+|[push.c](https://github.com/Arzumirzeb/holbertonschool-monty/blob/arzu/push.c)|push value|
+|[swap.c](https://github.com/Arzumirzeb/holbertonschool-monty/blob/arzu/swap.c)|swaps the top two elements of the stack|
+|[nop.c](https://github.com/Arzumirzeb/holbertonschool-monty/blob/arzu/nop.c)|doing nothing|
 
 ## Authors/Collaborators
 *	Hasan Isgandarov-[Github]https://github.com/Hesen58/
